@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SheikhArts — Dessert Tables & Setups</title>
+  <style>
+    :root{
+      --bg:#f6f2ee; /* warm natural paper */
+      --accent:#c9a57a; /* warm sand */
+      --muted:#8b8175; /* soft brown/grey */
+      --white:#ffffff;
+      --card:#fffdfa;
+      --radius:14px;
+      --max:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--muted);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--max);margin:48px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#b98f63);display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:18px}
+    .brand h1{margin:0;font-size:20px;color:#4b4038}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+
+    .hero{margin-top:28px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9));border-radius:18px;padding:28px;display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center}
+
+    .hero-left h2{margin:0 0 12px 0;font-size:28px;color:#3e312a}
+    .tag{display:inline-block;background:var(--card);padding:8px 12px;border-radius:999px;font-weight:600;color:#6a5b52;margin-bottom:8px}
+    .hero-left p{line-height:1.5}
+    .cta{display:inline-block;margin-top:14px;background:var(--accent);color:var(--white);padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    .hero-right{background:var(--card);border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(60,40,20,0.06)}
+    .preview-image{width:100%;height:320px;object-fit:cover;border-radius:8px}
+
+    .services{display:flex;gap:18px;margin:28px 0;flex-wrap:wrap}
+    .service{flex:1;background:var(--card);padding:18px;border-radius:12px;min-width:220px}
+    .service h3{margin:0 0 8px 0;color:#3e312a}
+    .service p{margin:0;line-height:1.5}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .gallery img{width:100%;height:200px;object-fit:cover;border-radius:12px;display:block}
+
+    footer{margin-top:34px;padding:20px 12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3));display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .hero-right{order:-1}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      .gallery{grid-template-columns:1fr}
+      .brand h1{font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">SA</div>
+        <div>
+          <h1>SheikhArts</h1>
+          <p>Beautiful dessert tables • London & Midlands</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#menu">Menu</a>
+        <a href="#faq">FAQ</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <span class="tag">Wedding • Birthday • Corporate</span>
+        <h2>Memorable dessert tables that taste as good as they look</h2>
+        <p>We craft dessert tables and boxed desserts using natural materials, seasonal flavours and elegant styling. Available to hire for events across London and the Midlands.</p>
+        <a class="cta" href="#contact">Enquire & Book</a>
+      </div>
+      <aside class="hero-right">
+        <img class="preview-image" src="images/SA1.jpg" alt="SheikhArts dessert setup">
+      </aside>
+    </section>
+
+    <section id="services" class="services">
+      <div class="service">
+        <h3>Full Dessert Tables</h3>
+        <p>Styled tables with cakes, cupcakes, macarons, shot-glass desserts and fresh fruit platters. Styling props and stands included.</p>
+      </div>
+      <div class="service">
+        <h3>Boxed Desserts</h3>
+        <p>Gift-ready dessert boxes curated for corporate gifts, party favours and take-home treats. Custom branding available.</p>
+      </div>
+      <div class="service">
+        <h3>Styling Hire</h3>
+        <p>Stands, signage and bespoke florals available to hire so your table looks cohesive and premium.</p>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2 style="color:#3e312a">Menu & Pricing</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Full Dessert Tables</h3>
+          <p>£250 – £450 depending on size and number of desserts.</p>
+        </div>
+        <div class="service">
+          <h3>Boxed Desserts</h3>
+          <p>From £12 per box (min. 5 boxes, custom flavours available).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2 style="color:#3e312a">FAQs</h2>
+      <div style="margin-top:12px; line-height:1.5;">
+        <p><strong>Do you deliver?</strong> Yes, across London & the Midlands. Delivery fee depends on distance.</p>
+        <p><strong>How far in advance should I book?</strong> Ideally 2–3 weeks before your event.</p>
+        <p><strong>Do you cater for dietary restrictions?</strong> Yes, we can create gluten-free, vegan or nut-free options on request.</p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2 style="color:#3e312a">Gallery</h2>
+      <div class="gallery">
+        <img src="images/SA1.jpg" alt="Dessert setup 1">
+        <img src="images/SA2.jpg" alt="Dessert setup 2">
+        <img src="images/SA3.jpg" alt="Dessert setup 3">
+        <img src="images/SA4.jpg" alt="Dessert setup 4">
+        <img src="images/SA5.jpg" alt="Dessert setup 5">
+        <img src="images/SA6.jpg" alt="Dessert setup 6">
+        <img src="images/SA7.jpg" alt="Dessert setup 7">
+        <img src="images/SA8.jpg" alt="Dessert setup 8">
+        <img src="images/SA9.jpg" alt="Dessert setup 9">
+        <img src="images/SA10.jpg" alt="Dessert setup 10">
+        <img src="images/SA11.jpg" alt="Dessert setup 11">
+        <img src="images/SA12.jpg" alt="Dessert setup 12">
+        <img src="images/SA13.jpg" alt="Dessert setup 13">
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div>
+        <strong style="color:#3e312a">SheikhArts</strong>
+        <div style="font-size:13px">Dessert Tables & Boxes • London & Midlands</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:14px">Email: <a href="mailto:Sheikharts@hotmail.com">Sheikharts@hotmail.com</a></div>
+        <div style="margin-top:6px">Instagram: <a href="https://www.instagram.com/sheikharts/">@sheikharts</a></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
