@@ -1,217 +1,283 @@
-/* ---------------------------
-   GLOBAL STYLES
----------------------------- */
+/* ---------------- GENERAL ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", sans-serif;
-  background: #f5f0e9; /* warm luxury beige */
-  color: #222;
-  overflow-x: hidden;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: #f6f2ee;
+    color: #3a2d26;
+    line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-  margin: 0;
-  font-weight: 600;
+/* ---------------- WRAP ---------------- */
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 12px;
-}
-
-/* ---------------------------
-   HEADER / NAV
----------------------------- */
-
+/* ---------------- HEADER ---------------- */
 header {
-  width: 100%;
-  padding: 20px 40px;
-  box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: linear-gradient(135deg,#c9a57a,#b98f63);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #3e312a;
+}
+
+.brand p {
+    margin: 0;
+    font-size: 13px;
+    color: #8b8175;
 }
 
 nav a {
-  font-size: 16px;
-  text-decoration: none;
-  margin: 0 20px;
-  color: #111;
-  font-weight: 500;
-  transition: opacity 0.2s;
+    margin-left: 18px;
+    text-decoration: none;
+    color: #3e312a;
+    font-weight: 600;
 }
 
-nav a:hover {
-  opacity: 0.6;
-}
-
-/* ---------------------------
-   HERO SECTION
----------------------------- */
-
+/* ---------------- HERO ---------------- */
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  padding: 60px 40px;
-  gap: 40px;
-  box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9));
+    border-radius: 18px;
+    padding: 28px;
+    align-items: center;
+    margin-bottom: 28px;
 }
 
-.hero-left {
-  flex: 1;
+.hero-left .tag {
+    display: inline-block;
+    background: #fffdfa;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    color: #6a5b52;
+    margin-bottom: 8px;
 }
 
-.hero-left img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 20px;
+.hero-left h2 {
+    margin: 0 0 12px 0;
+    font-size: 28px;
+    color: #3e312a;
+}
+
+.hero-left p {
+    margin: 0;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 14px;
+    background: #c9a57a;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 .hero-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    background: #fffdfa;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(60,40,20,0.06);
 }
 
-.hero-right h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+.preview-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.hero-right p {
-  font-size: 18px;
-  line-height: 1.5;
-  max-width: 500px;
+/* ---------------- SERVICES ---------------- */
+.services {
+    display: flex;
+    gap: 18px;
+    margin: 28px 0;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-  }
-
-  .hero-left img {
-    height: 350px;
-  }
-
-  .hero-right h1 {
-    font-size: 36px;
-  }
+.service {
+    flex: 1;
+    background: #fffdfa;
+    padding: 18px;
+    border-radius: 12px;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(60,40,20,0.04);
 }
 
-/* ---------------------------
-   SECTION TITLES
----------------------------- */
-
-.section-title {
-  text-align: center;
-  margin: 80px 0 40px;
-  font-size: 32px;
-  font-weight: 700;
+.service h3 {
+    margin: 0 0 8px 0;
+    color: #3e312a;
 }
 
-/* ---------------------------
-   GALLERY
----------------------------- */
+.service p {
+    margin: 0;
+}
 
+/* ---------------- FAQ ---------------- */
+#faq h2 {
+    margin-top: 40px;
+}
+
+#faq div {
+    margin-top: 12px;
+}
+
+/* ---------------- GALLERY ---------------- */
 .gallery {
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 18px;
 }
 
 .gallery img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-/* ---------------------------
-   SERVICES GRID
----------------------------- */
-
-.services {
-  padding: 60px 40px;
-  box-sizing: border-box;
+.gallery img:hover {
+    transform: scale(1.03);
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+/* ---------------- MODALS ---------------- */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(18px);
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
 }
 
-.service-card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  text-align: center;
+.modal:target {
+    display: flex;
 }
 
-.service-card h3 {
-  margin-bottom: 10px;
-  font-size: 22px;
+.modal-content {
+    position: relative;
+    max-width: 88%;
+    max-height: 88%;
 }
 
-.service-card p {
-  font-size: 16px;
-  color: #444;
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
 }
 
-/* ---------------------------
-   CONTACT SECTION
----------------------------- */
-
-.contact {
-  margin-top: 80px;
-  padding: 80px 40px;
-  text-align: center;
-  background: #ece5da;
-  box-sizing: border-box;
+.modal .left,
+.modal .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    color: #3e312a;
+    text-decoration: none;
+    background: rgba(255,255,255,0.85);
+    padding: 10px 16px;
+    border-radius: 50%;
 }
 
-.contact h2 {
-  margin-bottom: 10px;
-  font-size: 34px;
+.modal .left { left: -50px; }
+.modal .right { right: -50px; }
+
+.close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 32px;
+    background: #fff;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.contact p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.contact a {
-  display: inline-block;
-  padding: 14px 26px;
-  background: #000;
-  color: #fff;
-  border-radius: 12px;
-  font-size: 16px;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.contact a:hover {
-  opacity: 0.7;
-}
-
-/* ---------------------------
-   FOOTER
----------------------------- */
-
+/* ---------------- FOOTER ---------------- */
 footer {
-  padding: 30px;
-  text-align: center;
-  font-size: 14px;
-  opacity: 0.6;
+    margin-top: 34px;
+    padding: 20px 12px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.3));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+footer a {
+    color: #3e312a;
+    text-decoration: none;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width:900px){
+    .hero {
+        grid-template-columns:1fr;
+    }
+    .hero-right {
+        order:-1;
+        margin-bottom: 20px;
+    }
+    .gallery {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:520px){
+    .gallery {
+        grid-template-columns:1fr;
+    }
+    .brand h1 {
+        font-size: 16px;
+    }
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
 }
